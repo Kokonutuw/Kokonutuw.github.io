@@ -309,7 +309,7 @@ span {
     font-size: 18px;
 }
 
-/* Vieille Informatique Section */
+/* Veille Informatique Section */
 .veille-informatique {
     padding: 100px 12%;
     background: #ffffff;
@@ -400,7 +400,7 @@ span {
 }
 
 .footer .icone a {
-    font-size: 24px;
+    font-size: 18px;
     color: white;
     margin: 0 10px;
     border: 2px solid #89a8ff;
@@ -410,7 +410,7 @@ span {
 
 .footer .icone a:hover {
     color: #89a8ff;
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 .footer ul {
