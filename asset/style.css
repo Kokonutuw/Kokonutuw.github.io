@@ -36,18 +36,6 @@ body {
     transition: 0.3s ease;
 }
 
-.logo {
-    font-size: 25px;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.logo:hover {
-    color: #89a8ff;
-    text-shadow: 0 0 10px #89a8ff;
-    transform: scale(1.1);
-}
 
 span {
     color: #89a8ff;
