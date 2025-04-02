@@ -35,7 +35,9 @@ body {
     backdrop-filter: blur(10px);
     transition: 0.3s ease;
 }
-
+menu-name{
+    font-family: 'Offside', serif;
+}
 
 span {
     color: #89a8ff;
