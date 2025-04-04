@@ -35,7 +35,7 @@ body {
     backdrop-filter: blur(10px);
     transition: 0.3s ease;
 }
-.header p{
+.header-title{
     font-family: 'Offside', serif;
     color : #fcfcfc;
 }
