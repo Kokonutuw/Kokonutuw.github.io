@@ -398,6 +398,7 @@ span {
     border: 2px solid #89a8ff;
     border-radius: 50%;
     transition: 0.3s;
+    padding : 6px ;
 }
 
 .footer .icone i:hover {
