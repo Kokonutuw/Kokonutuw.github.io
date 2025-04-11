@@ -467,10 +467,12 @@ span {
 
 .skill i {
     font-size: 1.5rem;
+    color : #1a1a1b
 }
 
 .skill span {
     font-size: 1.1rem;
+    color: #1a1a1b
 }
 
 .progress {
