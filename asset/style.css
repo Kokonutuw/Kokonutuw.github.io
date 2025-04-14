@@ -482,6 +482,12 @@ section.lien {
     padding-bottom: 40px;
 }
 
+section.competences {
+    padding-top: 180px;
+}
+.h2, h2 {
+    text-align : center ;
+}
 
 @media screen and (max-width:1024px){
     .home {
