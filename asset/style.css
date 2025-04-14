@@ -477,6 +477,11 @@ span {
     color: #1a1a1b
 }
 
+section.lien {
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
+
 
 @media screen and (max-width:1024px){
     .home {
