@@ -45,7 +45,7 @@ span {
     color: #89a8ff;
 }
 
-.epreuveE4-content h2 span {
+.epreuveE5-content h2 span {
     font-family: 'Offside', serif;
 }
 
@@ -172,8 +172,8 @@ span {
 }
 
 
-/* Epreuve E4 Section */
-.epreuveE4 {
+/* Epreuve E5 Section */
+.epreuveE5 {
     display: flex;
     justify-content: center;
     padding: 10% 8%;
@@ -181,12 +181,12 @@ span {
     color: #1a1a1b;
 }
 
-.epreuveE4-content {
+.epreuveE5-content {
     max-width: 1000px;
     width: 100%;
 }
 
-.epreuveE4-content h2 {
+.epreuveE5-content h2 {
     font-size: 42px;
     margin-bottom: 30px;
     font-family: 'Offside', serif;
@@ -194,13 +194,13 @@ span {
     text-align: center;
 }
 
-.epreuveE4-text {
+.epreuveE5-text {
     font-size: 18px;
     line-height: 1.8;
     text-align: justify;
 }
 
-.epreuveE4-points {
+.epreuveE5-points {
     margin: 30px 0;
     padding: 20px 40px;
     background: #f5f5f5;
@@ -208,19 +208,19 @@ span {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.epreuveE4-points p {
+.epreuveE5-points p {
     margin: 15px 0;
     padding-left: 20px;
     border-left: 3px solid #89a8ff;
     font-size: 18px;
 }
 
-.epreuveE4-text > p {
+.epreuveE5-text > p {
     margin: 20px 0;
     font-size: 18px;
 }
 
-.epreuveE4-content p {
+.epreuveE5-content p {
     font-size: 18px;
     line-height: 1.8;
 }
