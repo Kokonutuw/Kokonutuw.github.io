@@ -344,10 +344,10 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top : 35 px ;
-    padding-bottom : 20 px ;
-    padding-left : 20 px ;
-    padding-right : 20 px ; 
+    padding-top: 35px ;
+    padding-bottom: 20px ;
+    padding-left: 20px ;
+    padding-right: 20px ; 
 }
 
 .system-card:hover {
@@ -401,11 +401,11 @@ span {
     border: 2px solid #89a8ff;
     border-radius: 50%;
     transition: 0.3s;
-    padding : 6px ;
+    padding: 6px ;
 }
 
 .footer .icone i:hover {
-    color: #89a8ff;
+    color:#89a8ff;
     transform: scale(1.5);
 }
 
@@ -419,12 +419,12 @@ span {
 }
 
 .footer ul li a {
-    color: white;
+    color:white;
     transition: 0.3s;
 }
 
 .footer ul li a:hover {
-    color: #89a8ff;
+    color:#89a8ff;
 }
 
 .copyright {
@@ -467,12 +467,12 @@ span {
     background: rgba(255, 255, 255, 0.05);
     padding: 1rem;
     border-radius: 0.5rem;
-    display : flex;
+    display:flex;
 }
 
 .skill i {
     font-size: 1.5rem;
-    color : #1a1a1b
+    color:#1a1a1b
 }
 
 .skill span {
@@ -503,9 +503,9 @@ section.competences {
     }
 
     .img-box img {
-        display : none
+        display:none
     }
     .h2.heading {
-        font-size: 28 px ;
+        font-size: 28px ;
         
 }
