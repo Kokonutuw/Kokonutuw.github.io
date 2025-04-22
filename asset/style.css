@@ -501,6 +501,36 @@ section.competences {
     
 }
 
+.cyber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10% 3%;
+    background: #1a1a1b;
+    background-size: auto;
+    color: white;
+}
+
+.about-content-cyber{
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-content-cyber h2 {
+    font-family: 'Offside', serif;
+    font-size: 42px;
+    color: #89a8ff;
+}
+
+
+
+.about-content-cyber p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 20px;
+    text-align: justify;
+}
+
 @media screen and (max-width:1024px){
     .home {
         display: flex;
