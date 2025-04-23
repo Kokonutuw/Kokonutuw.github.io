@@ -27,7 +27,7 @@
         <section class="link-back">
             <a href="https://kokonutuw.github.io/index.html#projets" target="_blank" class="btn-1"> Retour ..  </a>
         </section>
-        <h2 class="heading">Projets annexes pendant les stages</h2>
+        <h2 class="heading">Projets réalisés chez ACCK</h2>
         <div class="skills-container">
             <div class="skill-category">
                 <h3>Outils et logiciels</h3>
@@ -73,10 +73,57 @@
             </div>
         </div>
     </section>
-    <section>
-        <h2 class="heading">Stage 2 </h2>
-        <p></p>
-    </section>
+
+    <section id="cyber" class="cyber">
+        <div class="about-content-cyber">
+            <h2 class="heading">Plan de test </h2>
+            <p>Dans le cadre de l’assurance qualité d’un site web, la mise en place d’un plan de test est une étape essentielle. J’ai élaboré et appliqué ce plan afin de garantir le bon fonctionnement du site, d’identifier d’éventuels bugs ou dysfonctionnements, et de m’assurer que l’expérience utilisateur soit optimale. Cette démarche permet également de vérifier que toutes les fonctionnalités respectent les spécifications initiales du projet</p>
+            <p><a href="../asset/ACSO Plan de tests.xlsx">Le plan de test </a>a été réalisé pour l'automobile club du sud</p>
+            <h2 class="heading">Protocole</h2>
+            <p>Pendant mon stage chez ACCK, j’ai été chargé de rédiger plusieurs protocoles à destination de l’entreprise et de ses clients, afin de faciliter la mise en place de certaines fonctionnalités spécifiques. Parmi ces protocoles figurent, par exemple,<a href="../asset/protocole-paint.pdf" target="_blank"> un guide d’utilisation de Paint pour redimensionner des images</a>, ainsi qu’un<a href="../asset/Protocole-Masquer-les-champs-du-formulaire.pdf" target="_blank"> protocole dédié au masquage de champs dans un formulaire.</a> Ce dernier repose sur un script conçu sur mesure pour les besoins internes d’ACCK.</p>
+            <h2 class="heading">Projet de récupération et gestion d'emails - ACCK</h2>
+            <p>Dans le cadre de mon stage au sein de l’entreprise ACCK, j’ai été chargé de développer une solution permettant d’automatiser la récupération et la gestion des emails reçus dans une boîte de messagerie spécifique. L’objectif principal était de faciliter l’intégration des échanges clients dans le système de gestion de tickets de l’entreprise.
+
+                Le projet s'articule autour d'un script PHP capable de se connecter à une boîte mail via IMAP, IMAP signifie Internet Message Access Protocol (en français : protocole d'accès aux messages Internet).
+
+                <br><br>C'est un protocole qui permet de lire et gérer les emails directement sur un serveur de messagerie sans les télécharger définitivement sur son ordinateur. d'extraire les informations utiles (expéditeur, date, sujet, corps du message, pièces jointes, etc.), et de les stocker de manière organisée dans une base de données MySQL.<br><br> Une interface web permet ensuite de visualiser ces emails et de consulter les détails associés, y compris les pièces jointes.
+                
+                Ce développement permet à l’entreprise de centraliser les échanges mails liés aux incidents, de fluidifier le travail des équipes support, et de poser les bases pour une future automatisation du traitement des tickets.</p>
+            <a href="https://github.com/Kokonutuw/Mail-Scrapping-ACCK" target="_blank">dépôt Git du projet</a><br><br>
+            <h2 class="heading">Création et amélioration de site internet</h2>
+            <p>En parallèle du développement de scripts spécifiques, j’ai également participé à des tâches de maintenance et de résolution de problèmes sur plusieurs sites web de l’entreprise. Cela a inclus des interventions correctives sur des bugs existants, des ajustements fonctionnels, ainsi que la création ou la mise à jour de certains sites selon les besoins exprimés. Ces missions m'ont permis d'élargir mes compétences en gestion de sites WordPress, en diagnostic de dysfonctionnements techniques et en mise en œuvre de solutions adaptées.</p>
+            <h3><a href="https://via-egeria.com" target="_blank">Via-Egeria</a></h3>
+            <p>En parallèle du développement de scripts spécifiques, j’ai également participé à la maintenance et à l’amélioration de plusieurs sites web de l’entreprise. Par exemple, sur le site Via Egeria, j’ai travaillé à l’optimisation de certaines fonctionnalités liées à la traduction en espagnol à l’aide du plugin WPML. J’ai corrigé divers bugs existants, notamment ceux affectant la cohérence des traductions entre les versions française et espagnole du site. J’ai également résolu des problèmes spécifiques liés à la newsletter, afin d’assurer une diffusion correcte et multilingue du contenu auprès des utilisateurs francophones et hispanophones.</p>
+            <p>J’ai également dû résoudre un problème lié à l’affichage des catégories sur le site. En effet, pour pouvoir organiser correctement certains articles selon leur langue, il était nécessaire d’assigner une catégorie spécifique à chaque langue (comme articles-fr ou articulos-es). Cependant, ces catégories techniques ne devaient pas être visibles sur le site lorsqu’un article était affiché. Pour répondre à ce besoin, j’ai développé un script PHP permettant de filtrer ces catégories et de ne pas les afficher aux visiteurs, tout en conservant leur utilité en interne pour le tri et la gestion multilingue.
+                <br><br>Le code correspondant est présenté ci-dessous :</p>
+            <div style="display: flex; justify-content: center; padding: 2em;">
+                <div style="background-color: #1e1e1e; color: #d4d4d4;text-align: justify; padding: 1em 1.5em; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.5; overflow-x: auto; max-width: 800px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                  <pre><code>&lt;?php
+              function no_display_article_language_terms($terms, $post_id, $taxonomy) {
+                  // Vérifier qu'on filtre bien les catégories (taxonomie "category")
+                  if (!($taxonomy === 'category' &amp;&amp; !empty($terms) &amp;&amp; !is_wp_error($terms))) {
+                      return $terms;
+                  }
+                  // Catégories à exclure
+                  $excluded_slugs = ['articles-fr','articulos-es'];
+              
+                  // Filtrer les catégories pour ne pas afficher celles qui doivent être exclues
+                  $filtered_terms = array_filter($terms, function ($term) use ($excluded_slugs) {
+                      return !in_array($term-&gt;slug, $excluded_slugs);
+                  });
+              
+                  return $filtered_terms;
+              }
+              
+              // Appliquer le filtre sur les catégories affichées
+              add_filter('get_the_terms', 'no_display_article_language_terms', 1, 3);
+              ?&gt;
+              </code></pre>
+                </div>
+              </div>
+            <h3><a href="https://nancy.dominicains.fr/" target="_blank"></a>Nancy Dominicains</h3>
+        </div>
+        </section>
 
     <section class="link">
         <a href="https://github.com/Kokonutuw/Project-workload" target="_blank" class="btn-1">En savoir plus sur ce projet .. </a>
