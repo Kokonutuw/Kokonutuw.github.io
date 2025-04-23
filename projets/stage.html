@@ -25,7 +25,7 @@
     </header>
     <section class="competences">
         <section class="link-back">
-            <a href="https://kokonutuw.github.io/index.html#projets" target="_blank" class="btn-1"> Retour ..  </a>
+            <a href="https://kokonutuw.github.io/index.html#projets" class="btn-1"> Retour ..  </a>
         </section>
         <h2 class="heading">Projets réalisés chez ACCK</h2>
         <div class="skills-container">
@@ -76,6 +76,10 @@
 
     <section id="cyber" class="cyber">
         <div class="about-content-cyber">
+            <h2 class="heading">Mise à jour du site de l'entreprise </h2>
+            <p>J’ai mis à jour les liens du site web de l’entreprise ACCK. Certains étaient obsolètes ou redirigeaient vers de mauvaises pages, j’ai donc corrigé les redirections pour améliorer la navigation et l’expérience utilisateur.</p>
+            <h2 class="heading">Plan réseau du service</h2>
+            <p>Pour comprendre le service informatique et vérifier son fonctionnement l'entreprise m'a demandé de créer <a href="../asset/Diagramme du réseau interne de l'entreprise-1.pdf" target="blank"> plan du réseau de l'entreprise. </a></p>
             <h2 class="heading">Plan de test </h2>
             <p>Dans le cadre de l’assurance qualité d’un site web, la mise en place d’un plan de test est une étape essentielle. J’ai élaboré et appliqué ce plan afin de garantir le bon fonctionnement du site, d’identifier d’éventuels bugs ou dysfonctionnements, et de m’assurer que l’expérience utilisateur soit optimale. Cette démarche permet également de vérifier que toutes les fonctionnalités respectent les spécifications initiales du projet</p>
             <p><a href="../asset/ACSO Plan de tests.xlsx">Le plan de test </a>a été réalisé pour l'automobile club du sud</p>
@@ -93,9 +97,9 @@
             <h2 class="heading">Création et amélioration de site internet</h2>
             <p>En parallèle du développement de scripts spécifiques, j’ai également participé à des tâches de maintenance et de résolution de problèmes sur plusieurs sites web de l’entreprise. Cela a inclus des interventions correctives sur des bugs existants, des ajustements fonctionnels, ainsi que la création ou la mise à jour de certains sites selon les besoins exprimés. Ces missions m'ont permis d'élargir mes compétences en gestion de sites WordPress, en diagnostic de dysfonctionnements techniques et en mise en œuvre de solutions adaptées.</p>
             <h3><a href="https://via-egeria.com" target="_blank">Via-Egeria</a></h3>
-            <p>En parallèle du développement de scripts spécifiques, j’ai également participé à la maintenance et à l’amélioration de plusieurs sites web de l’entreprise. Par exemple, sur le site Via Egeria, j’ai travaillé à l’optimisation de certaines fonctionnalités liées à la traduction en espagnol à l’aide du plugin WPML. J’ai corrigé divers bugs existants, notamment ceux affectant la cohérence des traductions entre les versions française et espagnole du site. J’ai également résolu des problèmes spécifiques liés à la newsletter, afin d’assurer une diffusion correcte et multilingue du contenu auprès des utilisateurs francophones et hispanophones.</p>
-            <p>J’ai également dû résoudre un problème lié à l’affichage des catégories sur le site. En effet, pour pouvoir organiser correctement certains articles selon leur langue, il était nécessaire d’assigner une catégorie spécifique à chaque langue (comme articles-fr ou articulos-es). Cependant, ces catégories techniques ne devaient pas être visibles sur le site lorsqu’un article était affiché. Pour répondre à ce besoin, j’ai développé un script PHP permettant de filtrer ces catégories et de ne pas les afficher aux visiteurs, tout en conservant leur utilité en interne pour le tri et la gestion multilingue.
-                <br><br>Le code correspondant est présenté ci-dessous :</p>
+            <p>En parallèle du développement de scripts, j’ai participé à la maintenance et à l’amélioration de plusieurs sites web de l’entreprise, réalisés avec WordPress et le thème builder Avada. Avada permet de concevoir des pages web de manière flexible, sans avoir à coder chaque élément.</p> <p>La gestion des fichiers s’est faite via OneDrive et la communication avec l’équipe a été assurée principalement via Discord et OneDrive.</p><p>Sur le site Via Egeria, j’ai amélioré les fonctionnalités de traduction en espagnol avec le plugin WPML, corrigé des bugs et réglé des problèmes liés à l’envoi multilingue de la newsletter.</p> 
+            <p>J’ai aussi mis en place un script pour filtrer certaines catégories techniques utilisées pour organiser les articles par langue, afin qu’elles ne s’affichent pas sur le site tout en restant utiles en interne.</p> 
+            <p>Le code correspondant est présenté ci-dessous.</p>
             <div style="display: flex; justify-content: center; padding: 2em;">
                 <div style="background-color: #1e1e1e; color: #d4d4d4;text-align: justify; padding: 1em 1.5em; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.5; overflow-x: auto; max-width: 800px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
                   <pre><code>&lt;?php
@@ -121,13 +125,46 @@
               </code></pre>
                 </div>
               </div>
-            <h3><a href="https://nancy.dominicains.fr/" target="_blank"></a>Nancy Dominicains</h3>
+            <h3><a href="https://nancy.dominicains.fr/" target="_blank">Nancy Dominicains</a></h3>
+            <p>Dans le cadre de l’optimisation de l’expérience utilisateur sur le site, j’ai également mis en place un script permettant de masquer automatiquement le formulaire de contact après son envoi. L’objectif était d’éviter toute confusion pour l’utilisateur en supprimant les champs une fois le message envoyé, tout en laissant visible le message de confirmation. Cette fonctionnalité a été appliquée à un formulaire spécifique, identifié par son ID, à l’aide de l’événement wpcf7mailsent de Contact Form 7.
+
+                <br><br>En complément de cet aspect fonctionnel, j’ai également participé à la construction du visuel du site. Une base existait déjà, mais j’ai dû adapter et compléter cette structure en tenant compte de la charte graphique de l’entreprise et des besoins spécifiques du projet. Le système de fonctionnement et la technique reste la similaire au précèdent mais avec une utilisation de Trello pour la gestion des taches
+                <br><br>Le code correspondant est présenté ci-dessous </p>
+                <div style="display: flex; justify-content: center; padding: 2em;">
+                    <div style="background-color: #1e1e1e; color: #d4d4d4;text-align: justify; padding: 1em 1.5em; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.5; overflow-x: auto; max-width: 800px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                      <pre><code>&lt;?php
+                  function cacher_formulaire_apres_envoi() {
+                      ?&gt;
+                      &lt;script&gt;
+                      document.addEventListener('wpcf7mailsent', function(event) {
+                          if (event.detail.contactFormId == '119') { 
+                              let form = document.querySelector('.wpcf7 form');
+                              let response = document.querySelector('.wpcf7-response-output');
+                              if (form) {
+                                  let formFields = form.querySelectorAll('input, textarea, button, label'); 
+                                  formFields.forEach(function(field) {
+                                      field.style.display = 'none'; 
+                                  });
+                              }
+                              if (response){
+                                  response.style.display = 'block';
+                              }
+                          }
+                      }, false);
+                      &lt;/script&gt;
+                      &lt;?php
+                  }
+                  add_action('wp_footer', 'cacher_formulaire_apres_envoi');
+                  ?&gt;
+                  </code></pre>
+                    </div>
+                  </div>
+                <h3><a href="https://www.limours.acck2.fr" target="_blank">Limours</a></h3>
+                <p>Sur le site de Limours, j’ai travaillé à l’amélioration d’un site déjà existant en ajoutant de nouvelles fonctionnalités et en modernisant son apparence. Je me suis appuyé sur une maquette et un cahier des charges fournis en amont, ce qui m’a permis de concevoir des visuels adaptés et de mettre en place les éléments demandés de manière fidèle et fonctionnelle.</p>
+
+        
         </div>
         </section>
-
-    <section class="link">
-        <a href="https://github.com/Kokonutuw/Project-workload" target="_blank" class="btn-1">En savoir plus sur ce projet .. </a>
-    </section>
 
     <footer class="footer">
         <div class="icone">
