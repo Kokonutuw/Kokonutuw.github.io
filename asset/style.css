@@ -555,7 +555,12 @@ section.competences {
 .sql{
     max-width: 50%;
 }
-
+.avada{ 
+    max-width: 5%;
+}
+.avadastage{ 
+    max-width: 15%;
+}
 @media screen and (max-width:1024px){
     .home {
         display: flex;
