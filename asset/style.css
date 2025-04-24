@@ -549,7 +549,7 @@ section.competences {
 }
 
 .velco{
-    max-height:54%;
+    max-height:55%;
     
 }
 .sql{
@@ -561,6 +561,7 @@ section.competences {
 .avadastage{ 
     max-width: 15%;
 }
+
 @media screen and (max-width:1024px){
     .home {
         display: flex;
