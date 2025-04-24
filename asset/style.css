@@ -552,6 +552,9 @@ section.competences {
     max-height:54%;
     
 }
+.sql{
+    max-width: 50%;
+}
 
 @media screen and (max-width:1024px){
     .home {
