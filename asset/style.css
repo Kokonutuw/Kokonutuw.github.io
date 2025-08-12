@@ -498,6 +498,10 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-decoration: none;
     color: inherit;
     display: block;
@@ -814,9 +818,15 @@ section.competences {
 
 .cyber-points p {
     margin: 15px 0;
-    padding-left: 20px;
+    padding: 10px 15px;
     border-left: 3px solid #89a8ff;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0 8px 8px 0;
 }
 
 .cyber {
@@ -826,11 +836,21 @@ section.competences {
     background: #ffffff;
     background-size: auto;
     color: #1a1a1b;
+    padding: 40px 5%;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
 }
 
-.about-content-cyber{
-    max-width: 800px;
-    text-align: center;
+.about-content-cyber {
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    padding: 0 5%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .about-content-cyber h2 {
@@ -864,7 +884,7 @@ section.competences {
 }
 
 
-@media screen and (max-width:1024px){
+@media screen and (max-width: 1024px) {
     .home {
         display: flex;
         flex-direction: column;
@@ -872,9 +892,47 @@ section.competences {
     }
 
     .img-box img {
-        display:none;
+        display: none;
     }
+    
     .h2.heading {
-        font-size: 28px ;      
-}
+        font-size: 28px;
+    }
+    
+    /* Styles pour les cartes de la veille informatique */
+    .systems-grid {
+        grid-template-columns: 1fr;
+        padding: 0 5%;
+        gap: 20px;
+    }
+    
+    .system-card {
+        padding: 15px;
+    }
+    
+    /* Styles pour la section cyber des projets */
+    .cyber h2.heading {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .about-content-cyber h2 {
+        font-size: 28px;
+    }
+    
+    .about-content-cyber p {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+    }
+    
+    .cyber-points {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .cyber-points p {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
 }
