@@ -596,95 +596,185 @@ body {
 .skills-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .skill-category {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 1rem;
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 .skill-category h3 {
     color: #1a1a1b;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    text-align : center ; 
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: 'Offside', sans-serif;
+    color: #89a8ff;
 }
 
 .skills-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .skill {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: #f8f9fa;
     padding: 1rem;
     border-radius: 0.5rem;
-    display:flex;
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    background: #f0f4ff;
+    transform: translateX(5px);
 }
 
 .skill i {
-    font-size: 1.5rem;
-    color:#1a1a1b
+    font-size: 1.4rem;
+    color: #89a8ff;
+    min-width: 24px;
+    text-align: center;
+    margin-top: 2px;
 }
 
 .skill span {
-    font-size: 1.1rem;
-    color: #1a1a1b
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Styles pour les écrans plus larges */
+@media screen and (min-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
+    
+    .skill-category {
+        padding: 2rem;
+    }
+    
+    .skill-category h3 {
+        font-size: 1.5rem;
+    }
+    
+    .skill span {
+        font-size: 1rem;
+    }
 }
 
 section.link {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-bottom: 40px;
+    padding: 20px 5% 40px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 section.link-back {
-    padding: 20px 5%;
+    padding: 15px 5% 20px;
     text-align: left;
+    box-sizing: border-box;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #7a9eff 0%, #5a7dff 100%);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(122, 158, 255, 0.3);
+    margin: 10px 0;
+}
+
+.btn-1:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(122, 158, 255, 0.4);
+    background: linear-gradient(135deg, #6a8eff 0%, #4a6dff 100%);
+}
+
+@media screen and (max-width: 480px) {
+    .btn-1 {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+    
+    section.link {
+        padding: 15px 5% 30px;
+    }
+    
+    section.link-back {
+        padding: 10px 5% 15px;
+    }
 }
 
 section.competences {
-    padding: 100px 5% 50px;
+    padding: 80px 5% 40px;
     min-height: calc(100vh - 60px);
     margin-top: 60px;
+    box-sizing: border-box;
 }
 
 .cyber {
-    padding: 60px 5%;
+    padding: 40px 5%;
+    box-sizing: border-box;
 }
 
 .about-content-cyber {
     max-width: 100%;
-    padding: 0 5%;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .cyber-points {
-    margin: 20px 0;
+    margin: 15px 0;
     padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .cyber-points p {
-    font-size: 16px;
-    margin: 12px 0;
-    padding-left: 15px;
+    font-size: 15px;
+    margin: 10px 0;
+    padding-left: 12px;
+    line-height: 1.5;
+    color: #333;
 }
 
 @media screen and (min-width: 1024px) {
     section.competences {
-        padding-top: 160px;
+        padding: 160px 8% 80px;
     }
     
     .skills-container {
         padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
     }
     
     .cyber {
@@ -692,18 +782,19 @@ section.competences {
     }
     
     .about-content-cyber {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
         padding: 0;
     }
     
     .cyber-points {
         margin: 30px 0;
-        padding: 20px 40px;
+        padding: 25px 40px;
     }
     
     .cyber-points p {
         font-size: 18px;
+        margin: 15px 0;
     }
 }
 
