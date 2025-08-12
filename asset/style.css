@@ -43,11 +43,15 @@ body {
 /* Menu Burger */
 .menu-btn {
     display: none;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     position: relative;
     z-index: 1001;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .menu-btn__lines,
@@ -58,21 +62,28 @@ body {
     background-color: #fcfcfc;
     position: absolute;
     transition: all 0.3s ease;
+    border-radius: 3px;
 }
 
 .menu-btn__lines {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+    content: '';
+    left: 0;
+    transition: transform 0.3s ease, top 0.3s ease;
 }
 
 .menu-btn__lines::before {
-    content: '';
     top: -8px;
 }
 
 .menu-btn__lines::after {
-    content: '';
     top: 8px;
 }
 
@@ -83,16 +94,21 @@ body {
 
 .menu-btn.active .menu-btn__lines::before {
     transform: rotate(45deg) translate(5px, 6px);
+    top: 0;
 }
 
 .menu-btn.active .menu-btn__lines::after {
     transform: rotate(-45deg) translate(5px, -6px);
+    top: 0;
+    background-color: #89a8ff;
 }
 
 /* Styles du menu mobile */
 @media screen and (max-width: 1023px) {
     .menu-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .navbar {
@@ -105,10 +121,11 @@ body {
         background-color: #1a1a1b;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        transition: right 0.3s ease;
+        justify-content: flex-start;
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
         z-index: 1000;
-        padding-top: 80px;
+        padding: 80px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     }
     
     .navbar.active {
@@ -116,15 +133,22 @@ body {
     }
     
     .nav-link {
-        margin: 15px 0;
-        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+        margin: 12px 0;
+        padding: 12px 20px;
+        font-size: 1.1rem;
+        text-align: center;
+        color: #fcfcfc;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
-}
-
-
-
-span {
-    color: #89a8ff;
+    
+    .nav-link:hover,
+    .nav-link:active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #89a8ff;
+    }
 }
 
 .epreuveE5-content h2 span {
