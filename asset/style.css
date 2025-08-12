@@ -192,24 +192,7 @@ body {
     border-bottom: 2px solid #89a8ff;
 }
 
-.home {
-    width: 100%;
-    min-height: 100vh;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12% 8%;
-    gap: 7em;
-    box-sizing: border-box;
-}
-
-.home-content h3 {
-    font-size: 42px;
-    color: #1a1a1b;
-}
-
-/* Styles pour le format PC (par défaut) */
+/* Section Home - Styles par défaut (PC) */
 .home {
     width: 100%;
     min-height: 100vh;
@@ -237,45 +220,46 @@ body {
     text-align: justify;
 }
 
-.btn-box {
+/* Styles pour les boutons de la section home */
+.home-content .btn-box {
     display: flex;
     gap: 1.5em;
     margin-top: 25px;
 }
 
-.btn-1, .btn-2 {
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 8px;
+.home-content .btn-1,
+.home-content .btn-2 {
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.2s ease;
     text-decoration: none;
-    white-space: nowrap;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.btn-1 {
-    background: #1a1a1b;
+.home-content .btn-1 {
+    background: #333;
     color: white;
-    border: 2px solid transparent;
 }
 
-.btn-1:hover {
-    background: white;
-    color: #1a1a1b;
-    border: 2px solid #1a1a1b;
+.home-content .btn-1:hover {
+    background: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.btn-2 {
-    background: #89a8ff;
+.home-content .btn-2 {
+    background: #4a7dff;
     color: white;
-    border: 2px solid transparent;
 }
 
-.btn-2:hover {
-    background: white;
-    color: #89a8ff;
-    border: 2px solid #89a8ff;
+.home-content .btn-2:hover {
+    background: #6a90ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 /* Styles pour le format mobile */
@@ -314,60 +298,11 @@ body {
         max-width: 200px;
         text-align: center;
     }
-}
-
-.home-content h1 {
-    font-size: 62px;
-    color: #89a8ff;
-    font-family: 'Offside', serif;
-    line-height: 1.2;
-}
-
-.home-content p {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #1a1a1b;
-    text-align: justify;
-}
-
-.btn-box {
-    display: flex;
-    gap: 1.5em;
-    margin-top: 25px;
-}
-
-.btn-1, .btn-2 {
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-    text-decoration: none;
-}
-
-.btn-1 {
-    background: #1a1a1b;
-    color: white;
-    border: 2px solid transparent;
-}
-
-.btn-1:hover {
-    background: white;
-    color: #1a1a1b;
-    border: 2px solid #1a1a1b;
-}
-
-.btn-2 {
-    background: #89a8ff;
-    color: white;
-    border: 2px solid transparent;
-}
-
-.btn-2:hover {
-    background: white;
-    color: #89a8ff;
-    border: 2px solid #89a8ff;
+    
+    .btn-2:hover {
+        color: #89a8ff;
+        border: 2px solid #89a8ff;
+    }
 }
 
 .img-box img {
