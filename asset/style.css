@@ -35,6 +35,18 @@ body {
     backdrop-filter: blur(10px);
     transition: 0.3s ease;
     box-sizing: border-box;
+    height: 80px;
+}
+
+@media screen and (max-width: 1023px) {
+    .header {
+        padding: 10px 5%;
+        height: 60px;
+    }
+    
+    .header-title {
+        font-size: 20px;
+    }
 }
 
 .header-title {
@@ -189,11 +201,43 @@ body {
     justify-content: space-between;
     padding: 12% 8%;
     gap: 7em;
+    box-sizing: border-box;
 }
 
 .home-content h3 {
     font-size: 42px;
     color: #1a1a1b;
+}
+
+@media screen and (max-width: 1023px) {
+    .home {
+        padding: 80px 5% 40px;
+        min-height: calc(100vh - 60px);
+        margin-top: 60px;
+        flex-direction: column;
+        gap: 2em;
+        text-align: center;
+    }
+    
+    .home-content h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .home-content h1 {
+        font-size: 36px !important;
+        margin-bottom: 20px;
+    }
+    
+    .home-content p {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .btn-box {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 .home-content h1 {
