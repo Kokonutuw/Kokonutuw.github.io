@@ -40,6 +40,92 @@ body {
     color : #fcfcfc;
     font-size: 30px;
 }
+/* Menu Burger */
+.menu-btn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.menu-btn__lines,
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+    width: 30px;
+    height: 3px;
+    background-color: #fcfcfc;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.menu-btn__lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-btn__lines::before {
+    content: '';
+    top: -8px;
+}
+
+.menu-btn__lines::after {
+    content: '';
+    top: 8px;
+}
+
+/* Animation du bouton burger */
+.menu-btn.active .menu-btn__lines {
+    background-color: transparent;
+}
+
+.menu-btn.active .menu-btn__lines::before {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.menu-btn.active .menu-btn__lines::after {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Styles du menu mobile */
+@media screen and (max-width: 1023px) {
+    .menu-btn {
+        display: block;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #1a1a1b;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding-top: 80px;
+    }
+    
+    .navbar.active {
+        right: 0;
+    }
+    
+    .nav-link {
+        margin: 15px 0;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+.headerphone{
+    display:none;
+}
+}
 
 span {
     color: #89a8ff;
@@ -562,6 +648,7 @@ section.competences {
     max-width: 15%;
 }
 
+
 @media screen and (max-width:1024px){
     .home {
         display: flex;
@@ -570,10 +657,15 @@ section.competences {
     }
 
     .img-box img {
-        display:none
+        display:none;
     }
     .h2.heading {
-        font-size: 28px ;
-        
+        font-size: 28px ;      
 }
+    .header{
+        display:none;
+    }
+    .headerphone{
+        display:block;
+    }
 }
