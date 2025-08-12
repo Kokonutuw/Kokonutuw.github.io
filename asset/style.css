@@ -26,7 +26,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 12%;
+    padding: 15px 5%;
     background: #1a1a1b;
     display: flex;
     justify-content: space-between;
@@ -34,11 +34,18 @@ body {
     z-index: 1000;
     backdrop-filter: blur(10px);
     transition: 0.3s ease;
+    box-sizing: border-box;
 }
-.header-title{
+
+.header-title {
     font-family: 'Offside', serif;
-    color : #fcfcfc;
-    font-size: 30px;
+    color: #fcfcfc;
+    font-size: 24px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
 }
 /* Menu Burger */
 .menu-btn {
@@ -109,13 +116,14 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 1002;
     }
     
     .navbar {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
+        width: 85%;
         max-width: 300px;
         height: 100vh;
         background-color: #1a1a1b;
@@ -123,9 +131,10 @@ body {
         align-items: center;
         justify-content: flex-start;
         transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-        z-index: 1000;
-        padding: 80px 20px 20px;
+        z-index: 1001;
+        padding: 80px 15px 20px;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
     }
     
     .navbar.active {
@@ -135,13 +144,14 @@ body {
     .nav-link {
         display: block;
         width: 100%;
-        margin: 12px 0;
-        padding: 12px 20px;
-        font-size: 1.1rem;
+        margin: 8px 0;
+        padding: 12px 15px;
+        font-size: 1rem;
         text-align: center;
         color: #fcfcfc;
         border-radius: 6px;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition: all 0.3s ease;
+        border: none;
     }
     
     .nav-link:hover,
