@@ -121,11 +121,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1024px){
-.headerphone{
-    display:none;
-}
-}
+
 
 span {
     color: #89a8ff;
@@ -662,10 +658,4 @@ section.competences {
     .h2.heading {
         font-size: 28px ;      
 }
-    .header{
-        display:none;
-    }
-    .headerphone{
-        display:block;
-    }
 }
