@@ -899,7 +899,6 @@ section.competences {
     .home {
         display: flex;
         flex-direction: column;
-        margin-top: 10rem;
     }
 
     .img-box img {
