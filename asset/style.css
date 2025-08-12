@@ -209,6 +209,76 @@ body {
     color: #1a1a1b;
 }
 
+/* Styles pour le format PC (par défaut) */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12% 8%;
+    gap: 7em;
+    box-sizing: border-box;
+}
+
+.home-content h1 {
+    font-size: 62px;
+    color: #89a8ff;
+    font-family: 'Offside', serif;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #1a1a1b;
+    text-align: justify;
+}
+
+.btn-box {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 25px;
+}
+
+.btn-1, .btn-2 {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-1 {
+    background: #1a1a1b;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.btn-1:hover {
+    background: white;
+    color: #1a1a1b;
+    border: 2px solid #1a1a1b;
+}
+
+.btn-2 {
+    background: #89a8ff;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.btn-2:hover {
+    background: white;
+    color: #89a8ff;
+    border: 2px solid #89a8ff;
+}
+
+/* Styles pour le format mobile */
 @media screen and (max-width: 1023px) {
     .home {
         padding: 80px 5% 40px;
@@ -217,11 +287,6 @@ body {
         flex-direction: column;
         gap: 2em;
         text-align: center;
-    }
-    
-    .home-content h3 {
-        font-size: 28px;
-        margin-bottom: 15px;
     }
     
     .home-content h1 {
@@ -237,6 +302,17 @@ body {
     .btn-box {
         justify-content: center;
         flex-wrap: wrap;
+        gap: 1em;
+        margin: 25px auto 0;
+        max-width: 100%;
+    }
+    
+    .btn-1, .btn-2 {
+        padding: 10px 20px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
     }
 }
 
