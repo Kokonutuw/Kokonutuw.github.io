@@ -747,7 +747,6 @@ section.link-back {
 }
 
 section.competences {
-    padding: 80px 5% 40px;
     min-height: calc(100vh - 60px);
     margin-top: 60px;
     box-sizing: border-box;
@@ -781,9 +780,6 @@ section.competences {
 }
 
 @media screen and (min-width: 1024px) {
-    section.competences {
-        padding: 160px 8% 80px;
-    }
     
     .skills-container {
         padding: 0;
