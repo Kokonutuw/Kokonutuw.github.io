@@ -217,6 +217,11 @@ body {
     margin-bottom: 20px;
 }
 
+.highlight-text {
+    color: #89a8ff;
+    font-weight: bold;
+}
+
 .home-content p {
     font-size: 18px;
     margin-top: 20px;
