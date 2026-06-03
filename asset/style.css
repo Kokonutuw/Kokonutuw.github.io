@@ -4,7 +4,11 @@
     font-weight: 900;
     font-style: bold;
   }
-  
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
