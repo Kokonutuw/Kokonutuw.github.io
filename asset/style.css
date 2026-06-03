@@ -270,7 +270,6 @@ body {
 @media screen and (max-width: 1023px) {
     .home {
         padding: 80px 5% 40px;
-        min-height: calc(100vh - 60px);
         margin-top: 60px;
         flex-direction: column;
         gap: 2em;
@@ -753,7 +752,6 @@ section.link-back {
 }
 
 section.competences {
-    min-height: calc(100vh - 60px);
     margin-top: 60px;
     box-sizing: border-box;
 }
