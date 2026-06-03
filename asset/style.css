@@ -753,6 +753,8 @@ section.link-back {
 
 section.competences {
     margin-top: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
     box-sizing: border-box;
 }
 
